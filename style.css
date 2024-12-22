@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 15vh;
+    background-color: #25242e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius:  50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 50px;
+    transition: 0.5s;
+}
+.logo img:hover{
+    transform: scale(1.1) rotate(20deg);
+}
+.bar{
+    color: white;
+    font-size: 30px;
+}
+.nav{
+    width: 100%;
+    height: 5vh;
+    background-color: #1c1b22;
+    transition: 0.7s;
+    overflow: hidden;
+}
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.nav li{
+    margin: 0px 10px;
+    padding: 5px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+.hidden{
+    height: 0;
+}
+.visible{
+    height: 5vh;
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 2px 2px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+}
+.card input[type= "email"], input[type='password']{
+    outline: none;
+    background-color: #25242e6b;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card input::placeholder{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+.button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button button{
+    width: 80%;
+    padding: 1vh;
+    border: none;
+    background-color: rgb(116, 217, 254);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+.card p a:hover{
+    color: lightgreen;
+}
+.button button:hover{
+    background-color: lightgreen;
+    transform: scale(1.1);
+}
+.card p a{
+    color:rgb(116, 217, 254);;
+}
+.fundo{
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(130deg, #ffd8d8, #d06aff, #bf36ff, #7052ff, #422cb5, #380349);
+    background-size: 200% 200%;
+    animation: animation 4s alternate infinite;
+    transition: 0.7s ease-in-out;
+}
+.card h1{
+    color: #422cb5;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+@keyframes animation {
+    0%{
+      background-position: 0% 50%; 
+    }
+    50%{
+        background-position: 50% 100%; 
+    }
+    100%{
+        background-position: 100% 0%; 
+    }
+}
